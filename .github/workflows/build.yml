@@ -1,6 +1,17 @@
-# Файл: build.yaml
-include:
-  - board: nice_nano_v2
-    shield: jorne_left
-  - board: nice_nano_v2
-    shield: jorne_right
+name: Build
+
+on:
+  push:
+    paths:
+      - "config/**"
+      - "build.yaml"
+      - ".github/workflows/build.yml"
+  pull_request:
+    paths:
+      - "config/**"
+      - "build.yaml"
+      - ".github/workflows/build.yml"
+
+jobs:
+  build:
+    uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@main
