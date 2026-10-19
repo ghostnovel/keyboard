@@ -6,9 +6,6 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // ────────────────────────────────────────────────────
-        // СЛОЙ 0 — BASE (QWERTY / ЙЦУКЕН)
-        // ────────────────────────────────────────────────────
         default_layer {
             bindings = <
     &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSPC
@@ -18,9 +15,6 @@
             >;
         };
 
-        // ────────────────────────────────────────────────────
-        // СЛОЙ 1 — NUMBER (Удержание левого нижнего mo 1)
-        // ────────────────────────────────────────────────────
         number_layer {
             bindings = <
     &kp TAB    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5      &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp BSPC
@@ -30,9 +24,6 @@
             >;
         };
 
-        // ────────────────────────────────────────────────────
-        // СЛОЙ 2 — SYMBOL (Удержание правого нижнего mo 2)
-        // ────────────────────────────────────────────────────
         symbol_layer {
             bindings = <
     &kp TAB    &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp ASTRK &kp LPRN &kp RPRN &kp BSPC
@@ -42,9 +33,6 @@
             >;
         };
 
-        // ────────────────────────────────────────────────────
-        // СЛОЙ 3 — MO3 (Удержание правого нижнего mo 3)
-        // ────────────────────────────────────────────────────
         mo3_layer {
             bindings = <
     &kp F1     &kp F2   &kp F3   &kp F4   &kp F5   &kp F6      &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
