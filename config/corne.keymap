@@ -6,43 +6,51 @@
     keymap {
         compatible = "zmk,keymap";
 
-        // СЛОЙ 0 — QWERTY
+        // ────────────────────────────────────────────────────
+        // СЛОЙ 0 — BASE (QWERTY / ЙЦУКЕН)
+        // ────────────────────────────────────────────────────
         default_layer {
             bindings = <
     &kp TAB    &kp Q    &kp W    &kp E    &kp R    &kp T        &kp Y    &kp U    &kp I    &kp O    &kp P    &kp BSPC
-    &kp LCTRL  &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J    &kp K    &kp L    &kp SEMI &kp SQT
-    &kp LSHFT  &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH &kp ESC
-                       &kp LGUI &mo 1   &kp SPACE             &kp RET  &mo 2    &kp RALT
+    &kp LSHFT  &kp A    &kp S    &kp D    &kp F    &kp G        &kp H    &kp J    &kp K    &kp L    &kp SEMI &kp SQT
+    &kp LCTRL  &kp Z    &kp X    &kp C    &kp V    &kp B        &kp N    &kp M    &kp COMMA &kp DOT  &kp FSLH &kp LALT
+                       &kp LGUI &mo 1   &kp SPACE             &kp RET  &mo 2    &mo 3
             >;
         };
 
-        // СЛОЙ 1 — NUMBER
+        // ────────────────────────────────────────────────────
+        // СЛОЙ 1 — NUMBER (Удержание левого нижнего mo 1)
+        // ────────────────────────────────────────────────────
         number_layer {
             bindings = <
     &kp TAB    &kp N1   &kp N2   &kp N3   &kp N4   &kp N5      &kp N6   &kp N7   &kp N8   &kp N9   &kp N0   &kp BSPC
-    &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4  &kp LEFT &kp DOWN &kp UP &kp RIGHT &trans &trans
-    &kp LSHFT  &trans   &trans   &trans   &trans   &trans      &trans   &trans   &trans   &trans   &trans   &trans
-                       &kp LGUI &mo 3   &kp SPACE             &kp RET  &trans   &kp RALT
+    &kp LSHFT  &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &trans &kp ESC  &trans   &trans   &kp UP   &trans   &trans   &kp DEL
+    &kp LCTRL  &trans   &trans   &trans   &trans   &trans      &trans   &kp LEFT &kp DOWN &kp RIGHT &trans   &kp LALT
+                       &kp LGUI &trans   &kp SPACE             &kp RET  &trans   &trans
             >;
         };
 
-        // СЛОЙ 2 — SYMBOL
+        // ────────────────────────────────────────────────────
+        // СЛОЙ 2 — SYMBOL (Удержание правого нижнего mo 2)
+        // ────────────────────────────────────────────────────
         symbol_layer {
             bindings = <
     &kp TAB    &kp EXCL &kp AT   &kp HASH &kp DLLR &kp PRCNT   &kp CARET &kp AMPS &kp ASTRK &kp LPRN &kp RPRN &kp BSPC
-    &trans     &trans   &trans   &trans   &trans   &trans      &kp MINUS &kp EQL  &kp LBKT &kp RBKT &kp BSLH &kp GRAVE
-    &kp LSHFT  &trans   &trans   &trans   &trans   &trans      &kp UNDER &kp PLUS &kp LBRC &kp RBRC &kp PIPE &kp TILDE
-                       &kp LGUI &trans   &kp SPACE             &kp RET  &mo 3    &kp RALT
+    &kp LSHFT  &kp GRAVE &kp TILDE &trans  &trans   &kp ESC     &kp BSLH &kp PIPE &kp FSLH &kp LBKT &kp RBKT &kp DEL
+    &kp LCTRL  &trans   &trans   &trans   &trans   &trans      &kp QMARK &kp LT  &kp GT   &kp LBRC &kp RBRC &kp LALT
+                       &kp LGUI &trans   &kp SPACE             &kp RET  &trans   &trans
             >;
         };
 
-        // СЛОЙ 3 — MO3 (пустой, для удержания)
+        // ────────────────────────────────────────────────────
+        // СЛОЙ 3 — MO3 (Удержание правого нижнего mo 3)
+        // ────────────────────────────────────────────────────
         mo3_layer {
             bindings = <
-    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-    &trans &trans &trans &trans &trans &trans   &trans &trans &trans &trans &trans &trans
-                  &trans &trans &trans             &trans &trans &trans
+    &kp F1     &kp F2   &kp F3   &kp F4   &kp F5   &kp F6      &kp F7   &kp F8   &kp F9   &kp F10  &kp F11  &kp F12
+    &kp LSHFT  &trans   &trans   &trans   &trans   &kp ESC     &trans   &kp INS  &kp HOME &kp PG_UP &trans   &kp DEL
+    &kp LCTRL  &trans   &trans   &trans   &trans   &trans      &trans   &trans   &kp END  &kp PG_DN &trans   &kp LALT
+                       &kp LGUI &trans   &kp SPACE             &kp RET  &trans   &trans
             >;
         };
     };
